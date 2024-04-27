@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqqywd6rj4vm7"]
+
+[ext_resource type="PackedScene" uid="uid://di4ub4u6ya3d7" path="res://barra.tscn" id="1_b8ssg"]
+[ext_resource type="PackedScene" uid="uid://cs7w54oddwp2r" path="res://bola.tscn" id="2_07ox0"]
+[ext_resource type="PackedScene" uid="uid://b08txnk2vfgjv" path="res://bolinha.tscn" id="3_vdexd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dmjmn"]
+size = Vector2(16, 200)
+
+[node name="Espaco" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_b8ssg")]
+position = Vector2(320, 424)
+
+[node name="Bola" parent="." instance=ExtResource("2_07ox0")]
+position = Vector2(320, 336)
+
+[node name="Bolinha" parent="." instance=ExtResource("3_vdexd")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(320, 548)
+shape = SubResource("RectangleShape2D_dmjmn")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = 312.0
+offset_top = 448.0
+offset_right = 328.0
+offset_bottom = 648.0

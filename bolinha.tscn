@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://b08txnk2vfgjv"]
+
+[ext_resource type="Script" path="res://bolinha-mouse.gd" id="2_k52vj"]
+[ext_resource type="Texture2D" uid="uid://dycp2hq2cunsj" path="res://ball.svg" id="2_x5jcw"]
+[ext_resource type="Script" path="res://bolinha-teclado.gd" id="4_l2y71"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_os0s1"]
+radius = 64.0
+
+[node name="Bolinha" type="Node2D"]
+
+[node name="bolinha-mouse" type="StaticBody2D" parent="."]
+script = ExtResource("2_k52vj")
+
+[node name="Ball" type="Sprite2D" parent="bolinha-mouse"]
+texture = ExtResource("2_x5jcw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bolinha-mouse"]
+shape = SubResource("CircleShape2D_os0s1")
+
+[node name="bolinha-teclado" type="StaticBody2D" parent="."]
+script = ExtResource("4_l2y71")
+
+[node name="Ball" type="Sprite2D" parent="bolinha-teclado"]
+position = Vector2(248, 152)
+texture = ExtResource("2_x5jcw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bolinha-teclado"]
+position = Vector2(248, 152)
+shape = SubResource("CircleShape2D_os0s1")
