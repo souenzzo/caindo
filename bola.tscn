@@ -3,11 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://dycp2hq2cunsj" path="res://ball.svg" id="1_2klff"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gy8kn"]
-radius = 64.0
+radius = 32.0
 
 [node name="Bola" type="RigidBody2D"]
 
 [node name="Ball" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_2klff")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

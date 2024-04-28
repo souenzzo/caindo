@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqqywd6rj4vm7"]
+[gd_scene load_steps=6 format=3 uid="uid://cqqywd6rj4vm7"]
 
 [ext_resource type="PackedScene" uid="uid://di4ub4u6ya3d7" path="res://barra.tscn" id="1_b8ssg"]
 [ext_resource type="PackedScene" uid="uid://cs7w54oddwp2r" path="res://bola.tscn" id="2_07ox0"]
 [ext_resource type="PackedScene" uid="uid://b08txnk2vfgjv" path="res://bolinha.tscn" id="3_vdexd"]
+[ext_resource type="PackedScene" uid="uid://b0e3ukywlm0cs" path="res://cesta.tscn" id="4_un4vb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dmjmn"]
 size = Vector2(16, 200)
@@ -28,3 +29,6 @@ offset_left = 312.0
 offset_top = 448.0
 offset_right = 328.0
 offset_bottom = 648.0
+
+[node name="cesta" parent="." instance=ExtResource("4_un4vb")]
+position = Vector2(440, 544)

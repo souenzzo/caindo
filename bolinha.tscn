@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://bolinha-teclado.gd" id="4_l2y71"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_os0s1"]
-radius = 64.0
+radius = 32.0
 
 [node name="Bolinha" type="Node2D"]
 
@@ -13,6 +13,7 @@ radius = 64.0
 script = ExtResource("2_k52vj")
 
 [node name="Ball" type="Sprite2D" parent="bolinha-mouse"]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_x5jcw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bolinha-mouse"]
@@ -23,6 +24,7 @@ script = ExtResource("4_l2y71")
 
 [node name="Ball" type="Sprite2D" parent="bolinha-teclado"]
 position = Vector2(248, 152)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_x5jcw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bolinha-teclado"]
